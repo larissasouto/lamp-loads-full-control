@@ -135,10 +135,17 @@ def calculate_priority(values):
 
     YGr = aux[4]
     print(YGr)
+    
+    client.write_register(1, int(YGr[0]*1000), unit=UNIT)
+    client.write_register(2, int(YGr[1]*1000), unit=UNIT)
+    client.write_register(3, int(YGr[2]*1000), unit=UNIT)
+    client.write_register(4, int(YGr[3]*1000), unit=UNIT)
+    client.write_register(5, int(YGr[4]*1000), unit=UNIT)
+    client.write_register(6, int(YGr[5]*1000), unit=UNIT)
+    client.write_register(7, int(YGr[6]*1000), unit=UNIT)
 
     memCMD = endCMD
     memYGr = YGr
-    
 
     time.sleep(10)
     return YGr
